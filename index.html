@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>禁止通行 - 卑以自牧 剑胆琴心</title><meta name="keywords" content="iot"><meta name="author" content="keanu"><meta name="copyright" content="keanu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="这是一个正在搭建的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="禁止通行">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="禁止通行">
+<meta property="og:description" content="这是一个正在搭建的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/null">
+<meta property="article:author" content="keanu">
+<meta property="article:tag" content="iot">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/null"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-03-11 19:47:10'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="禁止通行" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div></div><hr/></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/images/1_assets_images_media_wallpaper_genji-theatrical-wide.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">禁止通行</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">禁止通行</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/03/11/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" title="计算机层次和编程语言运行机制">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机层次和编程语言运行机制"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/03/11/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" title="计算机层次和编程语言运行机制">计算机层次和编程语言运行机制</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-11T04:50:36.000Z" title="发表于 2021-03-11 12:50:36">2021-03-11</time></span></div><div class="content">层次结构实际机器（物理设备）硬件逻辑层    门，触发器等逻辑电路组成    属于电子工程的领域微程序机器层    编程语言是微指令集    微指令所组成的微程序(机器指令)直接交由硬件执行传统机器曾    编程语言是CPU指令集（机器指令    编程语言和硬件是直接相关    不同架构的CPU使用不同的CPU指令集
+虚拟机器系统软件·操作系统层    向上提供了简易的操作界面    向下对接了指令系统，管理硬件资源    操作系统层是软件和硬件之间的适配层·汇编语言层    编程语言是汇编语言    汇编语言可以翻译成可直接执行的机器语言    完成翻译的过程的程序就是汇编曾·高级语言层    编程语言为广大程序员所接受    高级语言的类别非常多，由几百    常见的高级语言有：Python，java,C/C++,Golang等应用层    满足计算机针对某种用途而专门设计
+程序翻译和程序解释编译是将源程序翻译成可执行的目标代码，翻译与执行是分开的；而解释是对源程序的翻译与执行一次性完成，不生成可存储的目标代码。这只是表象，二者背后的最大区别是：对解释执行而言，程序运行时的控制权在 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/03/10/Editplus/" title="Editplus">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Editplus"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/03/10/Editplus/" title="Editplus">Editplus</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-10T09:20:38.000Z" title="发表于 2021-03-10 17:20:38">2021-03-10</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/02/19/%E8%BF%9C%E8%A1%8C%E5%8E%9F%E7%90%86/" title="远行原理">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="远行原理"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/02/19/%E8%BF%9C%E8%A1%8C%E5%8E%9F%E7%90%86/" title="远行原理">远行原理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-19T06:49:07.000Z" title="发表于 2021-02-19 14:49:07">2021-02-19</time></span></div><div class="content">断断续续关于这类写了不下三遍了
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/02/19/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="环境变量">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="环境变量"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/02/19/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="环境变量">环境变量</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-02-19T05:21:12.000Z" title="发表于 2021-02-19 13:21:12">2021-02-19</time></span></div><div class="content">图形使用是由命令端口演化而来所以Windows保留着dos如果在dos一个命令既不是内部或外部命令的话，也不是可运行的程序等说明没有在相对路径下找到所以我们要配置环境变量就是将它的绝对路径作为变量方便我们在所有的相对路径下使用该程序对了环境变量分为用户（sdminstrator）变量和系统变量这个很容易理解就是一个系统下可以有多个用户，系统变量用户可以共享，用户变量保证了每一个用户的私密性path是路径的意思当在dos执行程序是\如果该程序就在这个路径下的话便执行如果找不到便在path下检索如果在环境变量下配置则可以直接放在path中用分号（：）和之前的路径隔开通常都是双击新建就是把该程序所在的上层目录放到一个我们新建的变量当中动态的在path下做一个引用%% 是引用的
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/01/05/%E9%9A%8F%E8%AE%B0/" title="随记">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随记"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/01/05/%E9%9A%8F%E8%AE%B0/" title="随记">随记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-01-05T13:43:04.000Z" title="发表于 2021-01-05 21:43:04">2021-01-05</time></span></div><div class="content">属于我的爱情好像来了哈哈哈哈这次绝不错过，算了习惯一个人了
+经历过所以共情形形色色的人生
+一个人走的更快，但想走的远需要一个团队。
+2021年一月十九号凌晨口渴难受索性就起来了昨天晚上回来的都聚了一下像是每年的传统，每年头疼的都是喝酒和抽烟讨厌一身烟味回来洗了澡换了全身的衣服安安稳稳的上床百无聊赖的玩了会手机便睡了。无论那次聚会都有隔阂以前是他们给我的感觉现在是我主动与他们的，每个人都要走自己的路确定自己要走的路一直走下去就好。下次这种无聊的聚会我都不想去了现在嗓子估计要发炎了，眼睛干涩到不行反感在二手烟包裹跟熏香肠一样。价值观人生观依然不同我明确分开是必然，祝福他们好好的我想不打招呼的离开了。
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/30/%E4%BA%BA%E7%94%9F%E5%BF%97%E5%90%91/" title="人生志向">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="人生志向"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/30/%E4%BA%BA%E7%94%9F%E5%BF%97%E5%90%91/" title="人生志向">人生志向</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-30T00:59:11.000Z" title="发表于 2020-12-30 08:59:11">2020-12-30</time></span></div><div class="content">浩渺行无极，杨帆但信风
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/26/Linux/" title="Linux">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/26/Linux/" title="Linux">Linux</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-26T07:44:12.000Z" title="发表于 2020-12-26 15:44:12">2020-12-26</time></span></div><div class="content">基础篇
+Linux入门vm和Linux的安装Linux目录结构实操篇
+LIinuxvi和VIM的使用所用的Linux系统都会内建vi文本编辑器vim具有程序编辑的能力，考研看做是vi的增强版，考研主动的以字体颜色辨别语法的正确性，方便程序的设计。代码补完，编译以及错误跳转等方便编译的功能特别丰富，在程序员中被广泛使用。 
+vi和vim的三种模式正常模式    以vim打开一个档案就直接进入一般模式（这是默认的模式）。在这个模式中，你可以使用[上下左右]按键移动光标，你可以使用[删除字符]或[删除整行]来处理档案内容，以可以[粘贴复制]来处理你的文件数据。快捷键插入模式    按下i,l,o,O,a等任何一个字母进入编辑模式。命令模式    在这个模式当中，可以提供你相关指令，完成读取，存盘，替换，离开vim，显示行号等的动作则是在此模式中达成的。
+vi和vim模式的相互切换
+
+vi和vim快捷键1.复制当前行yy，复制当前行向下5行5yy。粘贴p。2.删除当前行dd，删除当前行向下5行5dd。3.在文件中查找某个单词[命令行下/关键词，回车查找，输入n就是查找下一个]4.设置文件的行号 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/26/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/26/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统">操作系统</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-26T07:43:32.000Z" title="发表于 2020-12-26 15:43:32">2020-12-26</time></span></div><div class="content">操作系统的演化无操作系统人工操作用户独占CPU等待人工操作资源利用率很低
+批处理系统无需等待人工操作批量输入任务资源利用率提升多道程序设计    是指在计算机内存中同时存放多个程序    多道程序在计算机的管理程序之下相互穿插远行    对多道程序的管理是操作系统的重要功能
+分时系统人——机交互多用户共享及时调试程序资源利用率提升
+Linux的存储管理Buddy内存管理算法Buddy算法是经典的
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2020/12/25/%E5%BF%83%E6%83%85%E4%B8%8D%E5%A5%BD/" title="心情不好">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="心情不好"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/25/%E5%BF%83%E6%83%85%E4%B8%8D%E5%A5%BD/" title="心情不好">心情不好</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-25T08:11:42.000Z" title="发表于 2020-12-25 16:11:42">2020-12-25</time></span></div><div class="content">能力不够，对自己还是挺失望的每一个不起舞的日子的，都是对生命的辜负，请你逼自己一把，就一步一步的的来。我其实也需要别人来来拯救，我希望你能看出我的自卑和敏感谁都别说让我一个人躲一躲，我有时候就想一个人呆在角落看着他们做自己的事，不要跟我讲话让我一个自闭就好了，我不想陪着你笑我不想和你就换感情，我不想跟别人有任何瓜葛。与其被别人喜欢不如被别人讨厌，如果你讨厌我，我其实还是蛮开心的。不会让别人对自己失望，只是单纯的自己对自己失望。我很不好请你早点出现，我需要你真的很需要
+
+搞怪的不是红绿灯，也不是时间问题，而是我数不清的犹豫，人生的出场顺序真的重要，也许我们迟一点相遇我可能不会那么自卑，或许我会勇敢一些。</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/19/%E8%A3%85%E6%9C%BA%E8%AF%95%E7%8E%A9/" title="装机试玩">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="装机试玩"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/19/%E8%A3%85%E6%9C%BA%E8%AF%95%E7%8E%A9/" title="装机试玩">装机试玩</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-19T07:45:34.000Z" title="发表于 2020-12-19 15:45:34">2020-12-19</time></span></div><div class="content">CPUAMD CPU的安装在cpu的底座下有一个金属把手往下推这个金属把手然后将其抬起至九十度与主板垂直
+然后拿起CPU正反都可以看见一个金属三角，在底座上也有一个小三角。我们将CPU的小三角和CPU插槽底座对齐，然后将CPU平稳的放下上下晃动确保安装到位。
+扣回刚才打开的金属把手。
+至此AM4接口的Ryzen系列CPU就算是安装完成注释：AMD桌面处理器拥有AM3+、FM2+、AM1三种不同接口，分别用于高端CPU、主流APU、低端APU，而从2016年开始，它们将全部统一为新的AM4。CPU插槽.
+intel CPU的安装在CPU插槽底座的右边可以看见像弯钩一样的金属把手用力下压这个把手然后向右边拽向上抬起就可以打开CPU插槽的保护盖
+拿起CPU可以在左上角和右上角看见类似小耳朵一样的豁口底座插槽有对应的俩个突起，与其对其用手捏住CPU的上下平稳的将CPU放在底座针脚上上下晃动CPU确保安装到位
+然后将顶盖放下将底部的豁口插入下方的螺丝柱下面最后用比较大的力气将弯钩状把手扣回原来的地方顶部的黑色塑料保护壳会自动脱落
+注意在安装过程中不要触碰到CPU底座中间的针脚他们异常脆弱如果不小 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">keanu</div><div class="author-info__description">这是一个正在搭建的博客</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/11/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" title="计算机层次和编程语言运行机制"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机层次和编程语言运行机制"/></a><div class="content"><a class="title" href="/2021/03/11/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6/" title="计算机层次和编程语言运行机制">计算机层次和编程语言运行机制</a><time datetime="2021-03-11T04:50:36.000Z" title="发表于 2021-03-11 12:50:36">2021-03-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/10/Editplus/" title="Editplus"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Editplus"/></a><div class="content"><a class="title" href="/2021/03/10/Editplus/" title="Editplus">Editplus</a><time datetime="2021-03-10T09:20:38.000Z" title="发表于 2021-03-10 17:20:38">2021-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/19/%E8%BF%9C%E8%A1%8C%E5%8E%9F%E7%90%86/" title="远行原理"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="远行原理"/></a><div class="content"><a class="title" href="/2021/02/19/%E8%BF%9C%E8%A1%8C%E5%8E%9F%E7%90%86/" title="远行原理">远行原理</a><time datetime="2021-02-19T06:49:07.000Z" title="发表于 2021-02-19 14:49:07">2021-02-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/02/19/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="环境变量"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="环境变量"/></a><div class="content"><a class="title" href="/2021/02/19/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="环境变量">环境变量</a><time datetime="2021-02-19T05:21:12.000Z" title="发表于 2021-02-19 13:21:12">2021-02-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/05/%E9%9A%8F%E8%AE%B0/" title="随记"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="随记"/></a><div class="content"><a class="title" href="/2021/01/05/%E9%9A%8F%E8%AE%B0/" title="随记">随记</a><time datetime="2021-01-05T13:43:04.000Z" title="发表于 2021-01-05 21:43:04">2021-01-05</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/408/" style="font-size: 1.1em; color: #999">408</a> <a href="/tags/Git/" style="font-size: 1.1em; color: #999">Git</a> <a href="/tags/Linux/" style="font-size: 1.1em; color: #999">Linux</a> <a href="/tags/java/" style="font-size: 1.5em; color: #99a9bf">java</a> <a href="/tags/tools/" style="font-size: 1.1em; color: #999">tools</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E5%BF%97%E5%90%91/" style="font-size: 1.1em; color: #999">人生志向</a> <a href="/tags/%E5%BF%83%E4%BA%8B/" style="font-size: 1.1em; color: #999">心事</a> <a href="/tags/%E6%83%85%E7%BB%AA/" style="font-size: 1.1em; color: #999">情绪</a> <a href="/tags/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" style="font-size: 1.1em; color: #999">电脑使用技巧</a> <a href="/tags/%E7%BC%96%E8%BE%91%E8%AF%AD%E8%A8%80-%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" style="font-size: 1.1em; color: #999">编辑语言 组成原理</a> <a href="/tags/%E8%A3%85%E6%9C%BA/" style="font-size: 1.1em; color: #999">装机</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">9</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">14</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-03-11T11:47:10.499Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By keanu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>#樱花<script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/title.js"></script>#樱花</div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
